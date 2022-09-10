@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body{
+  background-color: rgba(11,27,103,1);
+  color: rgba(11,27,103,1);
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
+}
+
+section{
+  padding: 1em;
+  margin: 0.5em auto;
+  width: 80%;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% );
+  font-size: 2rem;
+}
+/* ------------------- Header ----------------- */
+.main-heading{
+  font-size: 5rem;
+}
+
+.secondary-heading{
+  font-size: 4rem;
+  margin: 0.25em;
+}
+
+#actors, #shows{
+  margin: 0 1em;
+  cursor: pointer;
+  padding: 1em;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.sub-headings{
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+
+section > input{
+  width: 25vw;
+  height: 2em;
+  outline: none;
+  padding-left: 0.25em;
+  font-size: 2rem;
+}
+
+.error{
+  visibility: hidden;
+  color: red;
+  font-size: 1.5rem;
+}
+
+/* ------------------- Content ----------------- */
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+  background-color: white;
+}
+
+.show-name{
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.show-summary{
+  padding: 0 2rem;
+  font-size: 1.5rem;
+}
+
+.pic{
+  min-width: 20rem;
+}
+
+/* ------------------- Media queries ----------------- */
+
+@media (max-width: 520px){
+  *{
+    font-size: 50%;
+  }
+  
+  .container{
+    display: block;
+    text-align: center;
+  }
+  .pic{
+    min-height: 30rem;
+  }
+  #actors, #shows{
+    margin: 0;
+  }
+}
+
+@media (max-width: 335px){
+  *{
+    font-size: 31.25%;
+  }
+  .pic{
+    max-width: 85%;
+  }
+}
