@@ -97,7 +97,7 @@ const Header = () => {
       <section>
         {data === "people"
           ? responseOfData.map((item, index) => (
-              <div key={item._embedded.show.id} className="container">
+              <div key={item._links.character.href} className="container">
                 <img
                   src={item._embedded.show.image?.medium}
                   alt="Not found"
