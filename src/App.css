@@ -1,34 +1,39 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
 }
-body{
-  background-color: rgba(11,27,103,1);
-  color: rgba(11,27,103,1);
+body {
+  background-color: rgba(11, 27, 103, 1);
+  color: rgba(11, 27, 103, 1);
   word-spacing: 2px;
   letter-spacing: 0.5px;
 }
 
-section{
+section {
   padding: 1em;
   margin: 0.5em auto;
   width: 80%;
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% );
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(97, 186, 255, 1) 0%,
+    rgba(166, 239, 253, 1) 90.1%
+  );
   font-size: 2rem;
 }
 /* ------------------- Header ----------------- */
-.main-heading{
+.main-heading {
   font-size: 5rem;
 }
 
-.secondary-heading{
+.secondary-heading {
   font-size: 4rem;
   margin: 0.25em;
 }
 
-#actors, #shows{
+#actors,
+#shows {
   margin: 0 1em;
   cursor: pointer;
   padding: 1em;
@@ -36,12 +41,12 @@ section{
   width: 1.5em;
 }
 
-.sub-headings{
+.sub-headings {
   font-size: 1.5em;
   margin: 0.5em;
 }
 
-section > input{
+section > input {
   width: 25vw;
   height: 2em;
   outline: none;
@@ -49,7 +54,7 @@ section > input{
   font-size: 2rem;
 }
 
-.error{
+.error {
   visibility: hidden;
   color: red;
   font-size: 1.5rem;
@@ -57,7 +62,7 @@ section > input{
 
 /* ------------------- Content ----------------- */
 
-.container{
+.container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -65,44 +70,57 @@ section > input{
   background-color: white;
 }
 
-.show-name{
-  font-size: 2rem;
+.show-name {
   padding: 1rem;
+  font-size: 2rem;
 }
 
-.show-summary{
+.show-name a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: rgba(11, 27, 103, 1);
+}
+
+.show-summary {
   padding: 0 2rem;
+  font-size: 1.5rem;
+
+}
+
+.show-summary b,
+.show-summary p {
   font-size: 1.5rem;
 }
 
-.pic{
+.pic {
   min-width: 20rem;
 }
 
 /* ------------------- Media queries ----------------- */
 
-@media (max-width: 520px){
-  *{
+@media (max-width: 520px) {
+  * {
     font-size: 50%;
   }
-  
-  .container{
+
+  .container {
     display: block;
     text-align: center;
   }
-  .pic{
+  .pic {
     min-height: 30rem;
   }
-  #actors, #shows{
+  #actors,
+  #shows {
     margin: 0;
   }
 }
 
-@media (max-width: 335px){
-  *{
+@media (max-width: 335px) {
+  * {
     font-size: 31.25%;
   }
-  .pic{
+  .pic {
     max-width: 85%;
   }
 }
