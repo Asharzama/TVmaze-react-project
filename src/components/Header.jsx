@@ -15,6 +15,7 @@ const Header = () => {
           .then((res) => res.json())
           .then((dat) => {
             if (dat.length) {
+              // console.log(dat);
               setResponseOfData(dat);
               inputRef.current.style.visibility = "hidden";
             } else {
@@ -34,6 +35,7 @@ const Header = () => {
                   if (!result.length) {
                     inputRef.current.style.visibility = "visible";
                   }
+                  // console.log(result);
                   setResponseOfData(result);
                 });
 
@@ -64,6 +66,7 @@ const Header = () => {
           onClick={() => {
             setData("people");
             setResponseOfData([]);
+            setName("");
           }}
         />
         <label htmlFor="actors" className="sub-headings">
@@ -76,6 +79,7 @@ const Header = () => {
           onClick={() => {
             setData("shows");
             setResponseOfData([]);
+            setName("");
           }}
         />
         <label htmlFor="shows" className="sub-headings">
@@ -107,9 +111,12 @@ const Header = () => {
                   <h2 className="show-name">
                     {index + 1}. {item._embedded.show.name}
                   </h2>
-                  <h3 className="show-summary">
-                    {item._embedded.show.summary}
-                  </h3>
+                  <h3
+                    className="show-summary"
+                    dangerouslySetInnerHTML={{
+                      __html: item._embedded.show.summary,
+                    }}
+                  ></h3>
                 </div>
               </div>
             ))
@@ -125,11 +132,14 @@ const Header = () => {
                   <h2 className="show-name">
                     {index + 1}. {item.show.name}
                   </h2>
+                  <h3
+                    className="show-summary"
+                    dangerouslySetInnerHTML={{ __html: item.show.summary }}
+                  ></h3>
                   <h3 className="show-summary">
-                    {item.show.summary}
-                    <br />
                     Available on : {item.show.webChannel?.name}
-                    <br />
+                  </h3>
+                  <h3 className="show-summary">
                     Ratings : {item.show.rating?.average}
                   </h3>
                 </div>
