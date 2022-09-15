@@ -36,17 +36,17 @@ section {
 #shows {
   margin: 0 1em;
   cursor: pointer;
-  padding: 1em;
-  height: 1.5em;
-  width: 1.5em;
+  padding: 2em;
+  height: 2em;
+  width: 2em;
 }
 
 .sub-headings {
-  font-size: 1.5em;
+  font-size: 3rem;
   margin: 0.5em;
 }
 
-section > input {
+.input-field{
   width: 25vw;
   height: 2em;
   outline: none;
